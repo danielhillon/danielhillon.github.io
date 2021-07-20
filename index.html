@@ -1,0 +1,32 @@
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function operacion(){
+                var p=parseFloat(document.MyForm.peso.value);
+                var e=parseFloat(document.MyForm.estatura.value);
+                var imc=p/(e*e);
+                var imc= imc.toFixed(2);             
+                resul=document.getElementById("resultado");
+                resul.innerHTML=imc;
+             
+            }    
+        </script>    
+    </head>
+    <body>
+        <Form name="MyForm">
+            <center>
+                <h2 style="color:blue;">ÍNDICE DE MASA CORPORAL</h2>              
+                <img src="imagenes/IMC.jpg" style="width:20%">
+                <h3>Ingrese su peso en Kg:</h3>
+                <input type="text" name="peso" size="2" style="text-align:center"><br>
+                <h3>Ingrese su estatura en metros:</h3>
+                <input type="text" name="estatura" size="2" style="text-align:center"><br><br><br>
+                <input type="button" class="btn btn-info" value="Calcular IMC" onclick="operacion()"><br>
+                <h3 id="resultado" style="color:#007bff"></h3><br>
+            </center>    
+        </Form>
+    </body>
